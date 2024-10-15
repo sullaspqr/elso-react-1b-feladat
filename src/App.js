@@ -16,7 +16,7 @@ const ComponentSelector = ({ name, options, selectedOption, onSelect }) => {
             borderRadius: '5px',
           }}
         >
-          {option.name} - {option.price}$
+          {option.name} - {option.price} HUF
         </button>
       ))}
     </div>
@@ -31,10 +31,10 @@ export const App = () => {
     { name: 'Intel i5', price: 50000 },
     { name: 'Intel i7', price: 75000 },
   ];
-
+ 
   const memories = [
-    { name: '8GB RAM', price: 25000 },
-    { name: '16GB RAM', price: 30000 },
+    { name: '8GB RAM', price: 12000 },
+    { name: '16GB RAM', price: 25000 },
   ];
 
   const totalPrice = (processor?.price || 0) + (memory?.price || 0);
