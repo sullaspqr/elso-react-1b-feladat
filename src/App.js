@@ -23,40 +23,39 @@ const ComponentSelector = ({ name, options, selectedOption, onSelect }) => {
   );
 };
 
-const App = () => {
+export const App = () => {
   const [processor, setProcessor] = useState(null);
   const [memory, setMemory] = useState(null);
 
   const processors = [
-    { name: 'Intel i5', price: 200 },
-    { name: 'Intel i7', price: 300 },
+    { name: 'Intel i5', price: 50000 },
+    { name: 'Intel i7', price: 75000 },
   ];
 
   const memories = [
-    { name: '8GB RAM', price: 50 },
-    { name: '16GB RAM', price: 100 },
+    { name: '8GB RAM', price: 25000 },
+    { name: '16GB RAM', price: 30000 },
   ];
 
   const totalPrice = (processor?.price || 0) + (memory?.price || 0);
 
   return (
     <div>
-      <h2>Computer Builder App</h2>
+      <h2>Számítógép összeszerelő app</h2>
       <ComponentSelector
-        name="Processor"
+        name="Processzor"
         options={processors}
         selectedOption={processor}
         onSelect={setProcessor}
       />
       <ComponentSelector
-        name="Memory"
+        name="Memória"
         options={memories}
         selectedOption={memory}
         onSelect={setMemory}
       />
-      <h3>Total Price: {totalPrice}$</h3>
+      <h3>Teljes ár: {totalPrice} HUF</h3>
     </div>
   );
 };
 
-export default App;
