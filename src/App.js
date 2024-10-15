@@ -8,7 +8,7 @@ const ComponentSelector = ({ name, options, selectedOption, onSelect }) => {
         <button
           key={index}
           onClick={() => onSelect(option)}
-          style={{
+          style={{ 
             backgroundColor: selectedOption?.name === option.name ? 'lightgreen' : 'lightgrey',
             margin: '5px',
             padding: '10px',
